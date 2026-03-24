@@ -2,10 +2,11 @@ import Course from './Course'
 import Japan from './assets/wang-tianfang-7k5PgbasPew-unsplash.jpg'
 import street from './assets/street.jpg'
 import mountain from './assets/japan mountain.jpg'
+import { useState } from 'react'
 
 function Courselist(){
 
-    const courses=[
+    const [courses,setcourse]=useState([
         { 
       id:1,     
       title:"japan", 
@@ -40,12 +41,17 @@ function Courselist(){
             button:"APPLY NOW",
             rating:6,
         }
-    ]
-    courses.sort((a,b) =>a.price -b.price)
-    const trip=courses.filter((course)=>course.price>1000)
+    ])
 
-    const cousrselist=trip.map((course,index)=>
-    <Course key={index} title={course.title} price={course.price} button={course.button} image={course.image} rating={course.rating}/>)
+    function handledelete(id){
+        const newcourse=courses.filter((course)=> course.id !== id)
+        setcourse(newcourse)
+    }
+    // courses.sort((a,b) =>a.price -b.price)
+    // const trip=courses.filter((course)=>course.price>1000)
+
+    const cousrselist=courses.map((course)=>
+    <Course key={course.id} title={course.title} price={course.price} button={course.button} image={course.image} rating={course.rating} delete={handledelete} id={course.id}/>)
 
     return(
 <>

@@ -6,6 +6,7 @@ import Japan from './assets/wang-tianfang-7k5PgbasPew-unsplash.jpg'
 import street from './assets/street.jpg'
 import mountain from './assets/japan mountain.jpg'
 import Courselist from './Courselist'
+import Increment from './increment'
 // import bootstrap from 'bootstrap'
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
     <>
       {/* <Navbar/> */}
       <Courselist/>
+      {/* <Increment/> */}
       {/* <Footer/> */}
     </>
   )
