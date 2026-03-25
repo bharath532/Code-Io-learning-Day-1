@@ -47,8 +47,8 @@ function Courselist(){
         const newcourse=courses.filter((course)=> course.id !== id)
         setcourse(newcourse)
     }
-    // courses.sort((a,b) =>a.price -b.price)
-    // const trip=courses.filter((course)=>course.price>1000)
+    courses.sort((a,b) =>a.price -b.price)
+    const trip=courses.filter((course)=>course.price>1000)
 
     const cousrselist=courses.map((course)=>
     <Course key={course.id} title={course.title} price={course.price} button={course.button} image={course.image} rating={course.rating} delete={handledelete} id={course.id}/>)

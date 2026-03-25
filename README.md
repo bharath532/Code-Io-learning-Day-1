@@ -1,8 +1,5 @@
 # 🚀 Day 1 – React Basics
 
-## 📅 Date
-
-March 24, 2026
 
 ## 📚 Topics Covered
 
@@ -11,4 +8,14 @@ March 24, 2026
 * Components
 * Props
 * useState Hook
+
+# 🚀 Day 2 – React Intermediate Basics
+
+
+## 📚 Topics Covered
+
+* Array Sorting
+* Array Filtering
+* Conditional Rendering
+
 
