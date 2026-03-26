@@ -1,4 +1,4 @@
-# 🚀 Day 1 – React Basics
+# 🚀 Day 1 
 
 
 ## 📚 Topics Covered
@@ -9,7 +9,7 @@
 * Props
 * useState Hook
 
-# 🚀 Day 2 – React Intermediate Basics
+# 🚀 Day 2 
 
 
 ## 📚 Topics Covered
@@ -17,5 +17,15 @@
 * Array Sorting
 * Array Filtering
 * Conditional Rendering
+
+
+# 🚀 Day 3 
+
+## 📚 Topics Covered
+
+* useEffect Hook
+* Fetch API
+* Working with Dummy Database
+* Localhost API Connection
 
 
