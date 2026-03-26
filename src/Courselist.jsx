@@ -1,54 +1,35 @@
 import Course from './Course'
-import Japan from './assets/wang-tianfang-7k5PgbasPew-unsplash.jpg'
-import street from './assets/street.jpg'
-import mountain from './assets/japan mountain.jpg'
-import { useState } from 'react'
+
+import { useEffect, useState } from 'react'
 
 function Courselist(){
 
-    const [courses,setcourse]=useState([
-        { 
-      id:1,     
-      title:"japan", 
-      price:700,
-     button:"APPLY NOW",
-     image:Japan,
-     rating:5
-        },
+    const [courses,setcourse]=useState(null);
 
-         {    
-        id:2,  
-      title:"Osaka", 
-      price:600,
-     button:"APPLY NOW",
-     image:street,
-     rating:5
-        },
-
-         {   
-        id:3,   
-      title:"Tokyo", 
-      price:7600,
-     button:"APPLY NOW",
-     image:mountain,
-     rating:5
-        },
-        {
-            id:4,
-            title:"kyto",
-            price:1500,
-            image:street,
-            button:"APPLY NOW",
-            rating:6,
-        }
-    ])
+    useEffect(()=>{
+        fetch('http://localhost:3000/courses')
+        .then(res=>{
+            console.log(res);
+            return res.json()
+        })
+        .then(data=>{
+            setcourse(data);
+        })
+    },[])
 
     function handledelete(id){
         const newcourse=courses.filter((course)=> course.id !== id)
         setcourse(newcourse)
     }
-    courses.sort((a,b) =>a.price -b.price)
-    const trip=courses.filter((course)=>course.price>1000)
+
+    if(!courses){
+        return(
+            <>
+            </>
+        )
+    }
+    // courses.sort((a,b) =>a.price -b.price)
+    // const trip=courses.filter((course)=>course.price>1000)
 
     const cousrselist=courses.map((course)=>
     <Course key={course.id} title={course.title} price={course.price} button={course.button} image={course.image} rating={course.rating} delete={handledelete} id={course.id}/>)
@@ -61,3 +42,7 @@ function Courselist(){
 }
 
 export default Courselist
+
+
+
+// npx json-server --watch data/dummydata.json --port 3000 -- static ./data

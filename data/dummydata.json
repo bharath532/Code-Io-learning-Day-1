@@ -1,0 +1,38 @@
+{
+    "courses":[
+        { 
+      "id":1,     
+      "title":"japan", 
+      "price":700,
+     "button":"APPLY NOW",
+     "image":"http://localhost:3000/assets/wang-tianfang-7k5PgbasPew-unsplash.jpg",
+     "rating":5
+        },
+
+         {    
+        "id":2,  
+      "title":"Osaka", 
+      "price":600,
+     "button":"APPLY NOW",
+     "image":"http://localhost:3000/assets/street.jpg",
+     "rating":5
+        },
+
+         {   
+        "id":3,   
+      "title":"Tokyo", 
+      "price":7600,
+     "button":"APPLY NOW",
+     "image":"http://localhost:3000/assets/japan mountain.jpg",
+     "rating":5
+        },
+        {
+            "id":4,
+            "title":"kyto",
+            "price":1500,
+            "image":"http://localhost:3000/assets/street.jpg",
+            "button":"APPLY NOW",
+            "rating":6
+        }
+    ]
+}

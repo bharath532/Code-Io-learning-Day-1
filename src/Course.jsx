@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import Japan from './assets/wang-tianfang-7k5PgbasPew-unsplash.jpg'
+import { useEffect, useState } from 'react';
+// import Japan from './assets/wang-tianfang-7k5PgbasPew-unsplash.jpg'
 import Propstypes from 'prop-types'
 
 function Course(props){
@@ -7,7 +7,7 @@ function Course(props){
 
     // let purchased=false;
     const [purchased,setpurchased]=useState(false);
-    // const[discount,setdiscount]=useState(props.price)    
+    const[discount,setdiscount]=useState(props.price)    
 
     function buycourse(){
         console.log(props.title,"purchased");
@@ -16,6 +16,8 @@ function Course(props){
         console.log(purchased);
         
     }
+
+  
     
            return(
         <>
