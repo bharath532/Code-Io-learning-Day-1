@@ -26,6 +26,15 @@
 * useEffect Hook
 * Fetch API
 * Working with Dummy Database
-* Localhost API Connection
 
+
+
+# 🚀 Day 4
+
+## 📚 Topics Covered
+
+* Error Handling
+* Custom Hooks
+* useFetch Hook
+* Localhost API Connection
 
