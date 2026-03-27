@@ -1,21 +1,13 @@
 import Course from './Course'
 
 import { useEffect, useState } from 'react'
+import Usefetch from './Usefetch'
 
 function Courselist(){
 
-    const [courses,setcourse]=useState(null);
-
-    useEffect(()=>{
-        fetch('http://localhost:3000/courses')
-        .then(res=>{
-            console.log(res);
-            return res.json()
-        })
-        .then(data=>{
-            setcourse(data);
-        })
-    },[])
+   
+const[courses,error]=Usefetch('http://localhost:3000/courses');
+   
 
     function handledelete(id){
         const newcourse=courses.filter((course)=> course.id !== id)
@@ -25,6 +17,8 @@ function Courselist(){
     if(!courses){
         return(
             <>
+            {!error &&<h1 style={{textAlign:'center',padding:'60px'}}>Loading....</h1>}
+            {error &&<h1 style={{textAlign:'center',padding:'60px'}}>{error}</h1>}
             </>
         )
     }
