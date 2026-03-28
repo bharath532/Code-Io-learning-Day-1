@@ -38,3 +38,12 @@
 * useFetch Hook
 * Localhost API Connection
 
+# 🚀 Day 5 
+
+## 📚 Topics Covered
+
+* Fetch API
+* onChange Event in React
+
+
+
