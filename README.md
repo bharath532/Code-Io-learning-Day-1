@@ -45,5 +45,13 @@
 * Fetch API
 * onChange Event in React
 
+# 🚀 Day 6 – Revision Day
+
+
+## 📚 Topics Covered
+
+* Revision of onChange Event Handling
+* Revision of Previous React Concepts
+
 
 
