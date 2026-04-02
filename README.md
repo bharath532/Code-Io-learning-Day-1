@@ -53,5 +53,15 @@
 * Revision of onChange Event Handling
 * Revision of Previous React Concepts
 
+# 🚀 Day 7 – React Routing
+
+
+## 📚 Topics Covered
+
+* React Router
+* Navigation using Links
+* Creating a 404 Not Found Page
+
+
 
 

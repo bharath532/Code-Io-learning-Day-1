@@ -27,12 +27,15 @@ function lOGIN(){
     }
 
 
+    
+
+
     return(
 
         <>
 
         <form className="my-5 " action="" style={{padding:'30px', textAlign:"center", margin:"20px"}}>
-        <h1>Login form</h1>
+        <h3>Login form</h3>
             <label htmlFor="" style={{padding:"20px"}}>Username </label>
             <input type="text" placeholder="Enter the name" />
             <br />
