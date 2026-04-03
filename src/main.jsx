@@ -6,6 +6,7 @@ import Login from './Login'
 import Home from './Home'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import Notfound from './Notfound.jsx'
+import Increment from './increment.jsx'
 
 
 const router=createBrowserRouter([
@@ -23,6 +24,10 @@ const router=createBrowserRouter([
   {
     path:"/app",
     element:<App/>
+  },
+  {
+    path:"/counter",
+    element:<Increment/>
   }
 ]);
 

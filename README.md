@@ -63,5 +63,13 @@
 * Creating a 404 Not Found Page
 
 
+# 🚀 Day 8 – React Advanced State & Effects
+
+
+## 📚 Topics Covered
+
+* useEffect Cleanup Function
+* Updating State Properly
+
 
 
