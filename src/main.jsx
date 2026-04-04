@@ -7,6 +7,7 @@ import Home from './Home'
 import { createBrowserRouter,RouterProvider } from 'react-router-dom'
 import Notfound from './Notfound.jsx'
 import Increment from './increment.jsx'
+import Post from './Post.jsx'
 
 
 const router=createBrowserRouter([
@@ -28,6 +29,10 @@ const router=createBrowserRouter([
   {
     path:"/counter",
     element:<Increment/>
+  },
+  {
+    path:"/post/:id",
+    element:<Post/>
   }
 ]);
 

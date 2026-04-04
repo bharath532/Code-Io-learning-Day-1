@@ -1,16 +1,22 @@
-import { useEffect, useState } from "react";
-import { Link } from "react-router-dom";
+import { useEffect, useState,createContext } from "react";
+import { Link,useNavigate } from "react-router-dom";
+import Login from './Login'
+
+export const dataContext=createContext();
 
 function Home (){
+    const navigate=useNavigate();
+
     const [post,setpost]=useState(null)
 
+    const data="data context"
 
     useEffect(()=>{
 
         const controller=new AbortController;
         const signal=controller.signal;
 
-        setTimeout(()=>
+        
         fetch("http://localhost:3000/courses",{signal})
 
         .then(res=>{
@@ -23,7 +29,7 @@ function Home (){
         .catch(err=>{
             console.log(err);
         })
-        ,3000)
+        
 
         // Clean up function
         return()=>{
@@ -36,6 +42,7 @@ function Home (){
     return(
 
         <>
+  
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
             <div className="container-fluid">
                 <a className="navbar-brand fw-bold" href="#">
@@ -66,17 +73,20 @@ function Home (){
                         <li className="nav-item">
                             <Link className="nav-link" to="/login">login</Link>
                         </li>
+                         <li className="nav-item">
+                            <Link className="nav-link" to="/counter">increment</Link>
+                        </li>
                     </ul>
                 </div>
             </div>
         </nav>
 
 
-      <div style={{display:"flex", padding:"20px", margin:"20px", gap:"20px"}}>
+      <div style={{display:"flex", padding:"20px", margin:"20px", gap:"20px"}} >
         {post && post.map(posts=>{
             return(
                 <div>
-            <div className="card" style={{width: "18rem"}}>
+            <div key={posts.id} className="card" style={{width: "18rem"}} onClick={()=>{navigate('/post/'+posts.id)}}>
     <div className="card-body">
       <h5 className="card-title">{posts.title}</h5>
       <h3>{posts.price}</h3>
@@ -88,6 +98,9 @@ function Home (){
             )
         })}
       </div>
+            <dataContext.Provider value={data}>
+            <Login/>
+        </dataContext.Provider>
         
         </>
     );

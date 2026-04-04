@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Increment from "./increment";
 
 function lOGIN(){
 
@@ -52,6 +53,8 @@ function lOGIN(){
             {!same &&<p>password don't match</p>}
             <button type="submit" className="btn btn-outline-warning text-black" >Submit</button>
         </form>
+
+        <Increment/>
         </>
     );
 }

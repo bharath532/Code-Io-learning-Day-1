@@ -5,6 +5,7 @@
       "title":"japan", 
       "price":700,
      "button":"APPLY NOW",
+     "content":"the image represent by japan view of outside",
      "image":"http://localhost:3000/assets/wang-tianfang-7k5PgbasPew-unsplash.jpg",
      "rating":5
         },

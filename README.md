@@ -45,7 +45,7 @@
 * Fetch API
 * onChange Event in React
 
-# 🚀 Day 6 – Revision Day
+# 🚀 Day 6 
 
 
 ## 📚 Topics Covered
@@ -53,7 +53,7 @@
 * Revision of onChange Event Handling
 * Revision of Previous React Concepts
 
-# 🚀 Day 7 – React Routing
+# 🚀 Day 7 
 
 
 ## 📚 Topics Covered
@@ -63,13 +63,25 @@
 * Creating a 404 Not Found Page
 
 
-# 🚀 Day 8 – React Advanced State & Effects
+# 🚀 Day 8 
 
 
 ## 📚 Topics Covered
 
 * useEffect Cleanup Function
 * Updating State Properly
+
+
+# 🚀 Day 9 
+
+
+## 📚 Topics Covered
+
+* useContext Hook
+* useRef Hook
+* useNavigation
+* useParams
+
 
 
 
