@@ -39,6 +39,7 @@ function Increment(){
             <button className=" btn btn-warning" onClick={()=>setcount(refcount.current)}>Update</button>
 
         </div>
+        {data}
 
         </>
     );

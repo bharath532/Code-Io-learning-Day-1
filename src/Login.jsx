@@ -2,7 +2,7 @@ import { useState } from "react";
 import Increment from "./increment";
 
 function lOGIN(){
-
+    // these states are used to store the password and re-password and whether they are same or not
     const [pwd1,setpwd1]=useState("")
     const [pwd2,setpwd2]=useState("")
     const [same,setsame]=useState(true)
@@ -12,7 +12,7 @@ function lOGIN(){
         console.log(event.target.value);
         
     }
-
+    // this function is used to check whether the password and re-password are same or not and set the state of same to true or false accordingly
     function handlepwd2change(event){
         setpwd2(event.target.value)
         

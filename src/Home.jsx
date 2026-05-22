@@ -4,7 +4,9 @@ import Login from './Login'
 
 export const dataContext=createContext();
 
+// npx json-server --watch data/dummydata.json --port 3000 -- static ./data
 function Home (){
+    // navigate is used to navigate to different pages without refreshing the page
     const navigate=useNavigate();
 
     const [post,setpost]=useState(null)
@@ -16,7 +18,7 @@ function Home (){
         const controller=new AbortController;
         const signal=controller.signal;
 
-        
+        // fetch is used to fetch data from the server and it returns a promise
         fetch("http://localhost:3000/courses",{signal})
 
         .then(res=>{
